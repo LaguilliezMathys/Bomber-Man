@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7vbnk0uymras"]
+
+[ext_resource type="PackedScene" uid="uid://cvteia6ruvpdg" path="res://models/stylized_low_poly_wooden_crate.glb" id="1_uep05"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_uep05")]

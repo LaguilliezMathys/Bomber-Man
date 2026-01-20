@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2f77fb6ukc47"]
+[gd_scene load_steps=5 format=3 uid="uid://c2f77fb6ukc47"]
 
 [ext_resource type="PackedScene" uid="uid://d02l5nt3x52xu" path="res://pillar.tscn" id="1_nxogm"]
 [ext_resource type="PackedScene" uid="uid://c5b35lcofsyyk" path="res://character_model.tscn" id="2_3253y"]
+[ext_resource type="PackedScene" uid="uid://b7vbnk0uymras" path="res://crate.tscn" id="2_u3cyc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u3cyc"]
 
@@ -393,6 +394,9 @@ size = Vector3(2, 3, 2)
 
 [node name="Pillar" parent="Board/Pillars" instance=ExtResource("1_nxogm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4191743, 0.41009426, 1.0486431)
+
+[node name="Sketchfab_Scene" parent="Board/Pillars" instance=ExtResource("2_u3cyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.96247935, 2)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 
