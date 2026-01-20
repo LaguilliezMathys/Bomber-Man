@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://c2f77fb6ukc47"]
+[gd_scene load_steps=3 format=3 uid="uid://c2f77fb6ukc47"]
+
+[ext_resource type="Script" uid="uid://cynqlrynm6ues" path="res://scene.gd" id="1_ulcgi"]
+[ext_resource type="PackedScene" uid="uid://dd7ejaiqyovyp" path="res://stage/stage_mesh.tscn" id="2_nxogm"]
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_ulcgi")
+stage_mesh_scene = ExtResource("2_nxogm")
