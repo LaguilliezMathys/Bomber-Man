@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5b35lcofsyyk"]
+
+[ext_resource type="PackedScene" uid="uid://b62v1u8jionxe" path="res://models/bomberman.glb" id="1_wldta"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_wldta")]
