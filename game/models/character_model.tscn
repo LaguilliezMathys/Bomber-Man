@@ -3,3 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://b62v1u8jionxe" path="res://models/bomberman.glb" id="1_wldta"]
 
 [node name="Sketchfab_Scene" instance=ExtResource("1_wldta")]
+
+[node name="Sketchfab_model" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 3.8637753, 0, -1.8455822)
