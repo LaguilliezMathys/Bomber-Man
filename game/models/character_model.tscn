@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5b35lcofsyyk"]
+[gd_scene load_steps=2 format=3 uid="uid://bivkgmnfa5cqr"]
 
 [ext_resource type="PackedScene" uid="uid://b62v1u8jionxe" path="res://models/bomberman.glb" id="1_wldta"]
 

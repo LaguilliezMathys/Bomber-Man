@@ -1,5 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7vbnk0uymras"]
+[gd_scene load_steps=3 format=3 uid="uid://b7vbnk0uymras"]
 
 [ext_resource type="PackedScene" uid="uid://cvteia6ruvpdg" path="res://models/stylized_low_poly_wooden_crate.glb" id="1_uep05"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_25rop"]
+size = Vector3(0.23364258, 0.9372864, 0.93499756)
+
 [node name="Sketchfab_Scene" instance=ExtResource("1_uep05")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/root/GLTF_SceneRootNode/Plane_0/Object_4" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/root/GLTF_SceneRootNode/Plane_0/Object_4/StaticBody3D" index="0"]
+transform = Transform3D(3.9825306, 0, 0, 0, 1, 0, 0, 0, 1, 0.0073541934, 0.49769118, -0.013519287)
+shape = SubResource("BoxShape3D_25rop")

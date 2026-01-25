@@ -1,8 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://d02l5nt3x52xu"]
+[gd_scene load_steps=3 format=3 uid="uid://d02l5nt3x52xu"]
 
 [ext_resource type="PackedScene" uid="uid://byabajc7t340e" path="res://models/low_poly_pillar.glb" id="1_rjv88"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vcdp5"]
+size = Vector3(3.982483, 4.1882324, 12.200439)
 
 [node name="Sketchfab_Scene" instance=ExtResource("1_rjv88")]
 
 [node name="Object_2" parent="Sketchfab_model/4ec6aa783d7a470ab7a007f05c8cbb36_obj_cleaner_materialmerger_gles" index="0"]
 transform = Transform3D(0.40290603, 0, 0, 0, 0.42632538, 0, 0, 0, 0.3240898, -2.1203365, -0.086209655, -0.016916633)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/4ec6aa783d7a470ab7a007f05c8cbb36_obj_cleaner_materialmerger_gles/Object_2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 5.568109, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/4ec6aa783d7a470ab7a007f05c8cbb36_obj_cleaner_materialmerger_gles/Object_2/StaticBody3D" index="0"]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.99996364, 0, 0, 0, 0.9999994, 0.134857, 0.26012033, 6.974197)
+shape = SubResource("BoxShape3D_vcdp5")
