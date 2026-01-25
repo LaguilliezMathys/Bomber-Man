@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var flash_duration := 5.0
-@export var explosion_radius := 5.0
+@export var explosion_radius := 4.0
 @export var explosion_effect_scene: PackedScene = preload("res://effects/explosion_effect.tscn")
 
 var timer := 0.0
@@ -37,8 +37,19 @@ func _process(delta):
 
 func explode():
 	exploded = true
-
 	var explosion = explosion_effect_scene.instantiate()
 	explosion.global_transform = global_transform
 	get_parent().add_child(explosion)
+
+	# Détruire les crates dans un rayon aligné sur les axes X et Z
+	# On utilise un groupe 'crates' (ajouté lors de l'instanciation des murs destructibles).
+	var bomb_pos: Vector3 = global_transform.origin
+	for crate in get_tree().get_nodes_in_group("crates"):
+		if not crate is Node3D:
+			continue
+		var pos: Vector3 = crate.global_transform.origin
+		# Rayon axis-aligned : vérifier séparément X et Z
+		if abs(pos.x - bomb_pos.x) <= explosion_radius and abs(pos.z - bomb_pos.z) <= explosion_radius:
+			crate.queue_free()
+
 	queue_free()

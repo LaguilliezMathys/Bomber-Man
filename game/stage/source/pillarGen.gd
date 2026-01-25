@@ -52,3 +52,6 @@ func spawn_wall(x: int, z: int) -> void:
 	wall.position = Vector3(world_x, 0.5, world_z)
 	wall.scale=Vector3(2,2,2)
 	add_child(wall)
+	# Marquer les crates pour qu'elles puissent être rapidement trouvées par l'explosion
+	# (le groupe 'crates' est utilisé par bomb.gd)
+	wall.add_to_group("crates")
